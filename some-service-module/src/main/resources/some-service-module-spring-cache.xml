@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <cache:advice id="someServiceAdvice" cache-manager="cacheManager">
-        <cache:caching cache="another">
+        <cache:caching cache="some-cache">
             <cache:cacheable method="getTest" key="#str"/>
         </cache:caching>
     </cache:advice>

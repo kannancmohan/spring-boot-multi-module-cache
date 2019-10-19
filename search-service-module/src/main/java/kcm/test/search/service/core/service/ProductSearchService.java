@@ -4,7 +4,7 @@ import kcm.test.search.service.core.model.Product;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
 
-@CacheConfig(cacheNames = {"product"})
+@CacheConfig(cacheNames = {"product-cache"})
 public interface ProductSearchService {
     @Cacheable
     public Product getTest();

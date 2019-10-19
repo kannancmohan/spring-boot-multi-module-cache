@@ -24,7 +24,10 @@ public class ApplicationCacheConfig extends CachingConfigurerSupport {
         SimpleCacheManager cacheManager = new SimpleCacheManager();
         if (!CollectionUtils.isEmpty(cacheProperties.getSpecs())) {
             System.out.println(">>>Creating cache manger with cache(s)");
-            List<ConcurrentMapCache> cacheList = cacheProperties.getSpecs().entrySet().stream().map(spec -> new ConcurrentMapCache(spec.getKey())).collect(Collectors.toList());
+            List<ConcurrentMapCache> cacheList = cacheProperties.getSpecs().entrySet().stream().map(spec -> {
+                System.out.println("Cache [" + spec.getKey() + "] created..");
+                return new ConcurrentMapCache(spec.getKey());
+            }).collect(Collectors.toList());
             cacheManager.setCaches(cacheList);
         }
         return cacheManager;
