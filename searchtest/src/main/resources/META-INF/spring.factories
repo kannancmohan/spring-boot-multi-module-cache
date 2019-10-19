@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+kcm.test.search.service.core.SearchModuleCommonConfig,\
+kcm.test.search.service.solr.SolrSearchModuleConfig,\
+kcm.test.search.service.elastic.ElasticSearchModuleConfig,\
+kcm.test.search.service.core.cache.SearchCacheConfig
