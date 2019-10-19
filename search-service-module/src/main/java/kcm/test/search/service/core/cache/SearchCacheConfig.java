@@ -10,9 +10,4 @@ import org.springframework.context.annotation.*;
 @EnableCaching
 public class SearchCacheConfig {
 
-    @Bean
-    public String testBean(){
-        System.out.println(">>> INSIDE SearchCacheConfig");
-        return "testBean";
-    }
 }
