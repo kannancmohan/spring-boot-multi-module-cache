@@ -1,4 +1,4 @@
-package kcm.test.another.cache.conf;
+package kcm.test.some.conf;
 
 import org.springframework.context.annotation.*;
 

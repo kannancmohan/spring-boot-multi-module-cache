@@ -1,6 +1,6 @@
-package kcm.test.another.cache.service.impl;
+package kcm.test.some.service.impl;
 
-import kcm.test.another.cache.service.SomeService;
+import kcm.test.some.service.SomeService;
 import org.springframework.stereotype.Service;
 
 @Service

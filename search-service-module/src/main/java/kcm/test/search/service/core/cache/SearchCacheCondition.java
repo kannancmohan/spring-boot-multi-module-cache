@@ -7,7 +7,7 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 public class SearchCacheCondition implements Condition {
     @Override
     public boolean matches(ConditionContext conditionContext, AnnotatedTypeMetadata annotatedTypeMetadata) {
-        String property = conditionContext.getEnvironment().getProperty("search.cache.enabled");
+        String property = conditionContext.getEnvironment().getProperty("search.service.module.cache.enabled");
         boolean isEnabled = Boolean.parseBoolean(property);
         if (isEnabled) {
             System.out.println(">>>Search Caching module enabled");

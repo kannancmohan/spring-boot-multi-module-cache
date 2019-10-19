@@ -1,6 +1,6 @@
 package test.boot;
 
-import kcm.test.another.cache.service.SomeService;
+import kcm.test.some.service.SomeService;
 import kcm.test.search.service.core.model.Product;
 import kcm.test.search.service.core.service.ProductSearchService;
 import org.springframework.beans.factory.annotation.Autowired;
