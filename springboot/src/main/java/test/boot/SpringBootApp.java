@@ -1,6 +1,6 @@
 package test.boot;
 
-import kcm.test.another.cache.service.AnotherService;
+import kcm.test.another.cache.service.SomeService;
 import kcm.test.search.service.core.model.Product;
 import kcm.test.search.service.core.service.ProductSearchService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,8 +33,8 @@ public class SpringBootApp {
         System.out.println("test1" + test1);
         Product test2 = productSearchService.getTest();
         System.out.println("test2" + test2);
-        AnotherService anotherService = ctx.getBean(AnotherService.class);
-        System.out.println("test3" + anotherService.getTest("hello"));
-        System.out.println("test4" + anotherService.getTest("hello"));
+        SomeService someService = ctx.getBean(SomeService.class);
+        System.out.println("test3" + someService.getTest("hello"));
+        System.out.println("test4" + someService.getTest("hello"));
     }
 }

@@ -1,5 +1,5 @@
 package kcm.test.another.cache.service;
 
-public interface AnotherService {
+public interface SomeService {
     String getTest(String str);
 }
