@@ -1,3 +1,3 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-SomeServiceModuleCacheConfig,\
-SomeServiceModuleConfig
+kcm.test.some.conf.SomeServiceModuleCacheConfig,\
+kcm.test.some.conf.SomeServiceModuleConfig
