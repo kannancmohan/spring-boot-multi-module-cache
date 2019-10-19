@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:cache="http://www.springframework.org/schema/cache" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <cache:advice id="anotherServiceAdvice" cache-manager="cacheManager">
+        <cache:caching cache="another">
+            <cache:cacheable method="getTest" key="#str"/>
+        </cache:caching>
+    </cache:advice>
+
+    <aop:config>
+        <aop:advisor advice-ref="anotherServiceAdvice" pointcut="execution(* kcm.test.another.cache.service.AnotherService.*(..))"/>
+    </aop:config>
+
+</beans>

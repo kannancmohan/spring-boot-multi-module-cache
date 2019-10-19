@@ -5,12 +5,13 @@
 
     <groupId>test.kcm</groupId>
     <artifactId>spring-boot-multi-module-cache</artifactId>
-    <version>0.1.0</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>search-test</module>
-        <module>spring-boot-starter-parent</module>
+        <module>search-service-module</module>
+        <module>springboot</module>
+        <module>some-service-module</module>
     </modules>
 
 </project>

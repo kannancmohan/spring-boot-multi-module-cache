@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+kcm.test.another.cache.conf.AnotherCacheConfig,\
+kcm.test.another.cache.conf.AnotherConfig
