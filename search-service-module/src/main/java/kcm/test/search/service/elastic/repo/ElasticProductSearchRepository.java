@@ -10,7 +10,7 @@ import kcm.test.search.service.elastic.model.ElasticProduct;
 
 /*@Repository
 @Qualifier("productSearchRepository1")*/
-public class ElasticProductSearchRepository extends SimpleElasticsearchRepository<ElasticProduct> implements ProductSearchRepository<ElasticProduct, String> {
+public class ElasticProductSearchRepository extends SimpleElasticsearchRepository<ElasticProduct, String> implements ProductSearchRepository<ElasticProduct, String> {
     public Page<Product> findByKey(String key) {
         return null;
     }
