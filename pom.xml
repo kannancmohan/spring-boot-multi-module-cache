@@ -12,6 +12,7 @@
         <module>search-service-module</module>
         <module>springboot</module>
         <module>some-service-module</module>
+        <module>cache-invalidator</module>
     </modules>
 
 </project>

@@ -39,6 +39,11 @@
             <artifactId>some-service-module</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>kcm.test.cache.invalidator</groupId>
+            <artifactId>cache-invalidator</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <!-- hot swapping, disable cache for template, enable live reload -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

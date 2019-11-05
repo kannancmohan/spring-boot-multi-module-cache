@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+kcm.test.cache.invalidator.config.CacheInvalidatorConfig

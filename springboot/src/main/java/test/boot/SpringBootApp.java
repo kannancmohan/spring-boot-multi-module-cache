@@ -1,8 +1,11 @@
 package test.boot;
 
+import kcm.test.cache.invalidator.service.CacheInvalidationService;
 import kcm.test.some.service.SomeService;
 import kcm.test.search.service.core.model.Product;
 import kcm.test.search.service.core.service.ProductSearchService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,6 +19,8 @@ import org.springframework.core.env.Environment;
 @SpringBootApplication
 public class SpringBootApp {
 
+    private static final Logger LOG = LoggerFactory.getLogger(SpringBootApp.class);
+
     @Autowired
     ProductSearchService productSearchService;
 
@@ -23,7 +28,7 @@ public class SpringBootApp {
     private Environment env;
 
     public static void main(String[] args) {
-
+        //TODO move these test to proper Test classes
         ApplicationContext ctx = SpringApplication.run(SpringBootApp.class, args);
         Environment environment = ctx.getBean(Environment.class);
         ProductSearchService productSearchService = ctx.getBean(ProductSearchService.class);
@@ -36,5 +41,11 @@ public class SpringBootApp {
         SomeService someService = ctx.getBean(SomeService.class);
         System.out.println("test3" + someService.getTest("hello"));
         System.out.println("test4" + someService.getTest("hello"));
+        CacheInvalidationService cacheInvalidationService = ctx.getBean(CacheInvalidationService.class);
+
+        cacheInvalidationService.invalidateCacheByCacheName("some-cache");
+        System.out.println("test5" + someService.getTest("hello"));
+        System.out.println("test6" + someService.getTest("hello"));
+
     }
 }
