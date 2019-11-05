@@ -16,12 +16,12 @@ public class SolrProductSearchService implements ProductSearchService {
     @Qualifier("productSearchRepository")
     ProductSearchRepository<Product, String> productSearchRepository;
 
-    public Product getTest() {
+    public Product getTest(String id) {
         /*SolrProduct product = new SolrProduct();
         product.setId("1234");
         product.setName("test name");
         productSearchRepository.save(product);*/
-        Optional<Product> product1 = productSearchRepository.findById("1234");
+        Optional<Product> product1 = productSearchRepository.findById(id);
         product1.ifPresent(p -> System.out.println("INSIDE getTest PRODUCT --> " + p));
         return product1.orElse(null);
     }

@@ -34,9 +34,9 @@ public class SpringBootApp {
         ProductSearchService productSearchService = ctx.getBean(ProductSearchService.class);
 
 
-        Product test1 = productSearchService.getTest();
+        Product test1 = productSearchService.getTest("1234");
         System.out.println("test1" + test1);
-        Product test2 = productSearchService.getTest();
+        Product test2 = productSearchService.getTest("1234");
         System.out.println("test2" + test2);
         SomeService someService = ctx.getBean(SomeService.class);
         System.out.println("test3" + someService.getTest("hello"));

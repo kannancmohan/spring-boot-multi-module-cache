@@ -7,5 +7,5 @@ import org.springframework.cache.annotation.Cacheable;
 @CacheConfig(cacheNames = {"product-cache"})
 public interface ProductSearchService {
     @Cacheable
-    public Product getTest();
+    public Product getTest(String id);
 }
