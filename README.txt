@@ -5,6 +5,10 @@ mvn clean install
 
 #Run spring boot
 run SpringBootApp from IDE
+or
+mvn spring-boot:run
+or
+mvn spring-boot:run -Dagentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=7000
 
 #Enable/Disable cache for some-service-moduel
 some.service.module.cache.enabled=true
