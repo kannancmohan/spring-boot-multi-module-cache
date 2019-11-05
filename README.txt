@@ -20,6 +20,9 @@ search.service.module.cache.enabled=true
 To invalidate cache by cache name and cache key :http://localhost:9090/invalidateCache/{cache-name}/{cache-key}
 To Invalidate all cache http://localhost:9090/invalidateAllCache
 
+#service endpoints
+To get product based on id: http://localhost:9090/product/{id}
+
 #Cache adapter setting
 set property "cache.adapter" to either "redis" or "simple"  
 If "redis" is used ,make sure redis is installed 
