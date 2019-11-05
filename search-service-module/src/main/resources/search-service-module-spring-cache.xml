@@ -5,7 +5,7 @@
 
     <cache:advice id="productSearchServiceAdvice" cache-manager="cacheManager">
         <cache:caching cache="product-cache">
-            <cache:cacheable method="getTest" key="#id"/>
+            <cache:cacheable method="getProduct" key="#id" unless="#result == null"/>
         </cache:caching>
     </cache:advice>
 

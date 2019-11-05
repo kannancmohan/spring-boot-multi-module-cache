@@ -16,7 +16,7 @@ public class ElasticProductSearchService implements ProductSearchService {
     ProductSearchRepository<Product, String> productSearchRepository;
 
     @Override
-    public Product getTest(String id) {
+    public Product getProduct(String id) {
         Optional<Product> product1 = productSearchRepository.findById(id);
         product1.ifPresent(p -> System.out.println("Invoked original ProductSearchService::getTest method --> " + p));
         return product1.orElse(null);

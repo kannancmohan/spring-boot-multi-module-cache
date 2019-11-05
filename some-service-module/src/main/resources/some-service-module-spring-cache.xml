@@ -5,7 +5,7 @@
 
     <cache:advice id="someServiceAdvice" cache-manager="cacheManager">
         <cache:caching cache="some-cache">
-            <cache:cacheable method="getTest" key="#str"/>
+            <cache:cacheable method="getTest" key="#str" unless="#result == null"/>
         </cache:caching>
     </cache:advice>
 

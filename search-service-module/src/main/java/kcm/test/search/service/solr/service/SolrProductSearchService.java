@@ -16,7 +16,7 @@ public class SolrProductSearchService implements ProductSearchService {
     @Qualifier("productSearchRepository")
     ProductSearchRepository<Product, String> productSearchRepository;
 
-    public Product getTest(String id) {
+    public Product getProduct(String id) {
         /*SolrProduct product = new SolrProduct();
         product.setId("1234");
         product.setName("test name");
