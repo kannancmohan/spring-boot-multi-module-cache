@@ -6,8 +6,8 @@ import org.springframework.context.annotation.*;
 @Conditional(SearchCacheCondition.class)
 @Configuration
 @ComponentScan("kcm.test.search.service.core")
-@PropertySource("classpath:search-cache-config.properties")
-@EnableCaching
-public class SearchCacheConfig {
+@PropertySource("classpath:search-service-cache-config.properties")
+@ImportResource("classpath:search-service-module-spring-cache.xml")
+public class SearchModuleCacheConfig {
 
 }

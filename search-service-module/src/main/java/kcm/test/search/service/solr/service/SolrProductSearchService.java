@@ -22,7 +22,7 @@ public class SolrProductSearchService implements ProductSearchService {
         product.setName("test name");
         productSearchRepository.save(product);*/
         Optional<Product> product1 = productSearchRepository.findById(id);
-        product1.ifPresent(p -> System.out.println("INSIDE getTest PRODUCT --> " + p));
+        product1.ifPresent(p -> System.out.println("Invoked original ProductSearchService::getTest method --> " + p));
         return product1.orElse(null);
     }
 }
