@@ -19,12 +19,12 @@ public class TestMultiModuleCacheController {
     @Autowired
     private ProductSearchService productSearchService;
 
-    @RequestMapping(value = "/product/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/product/{id}", produces = "application/json", method = RequestMethod.GET)
     @ResponseBody
-    public String getProductById(@PathVariable String id) {
+    public Product getProductById(@PathVariable String id) {
         Product product = productSearchService.getProduct(id);
         LOG.info("ProductSearchService::getProduct Value:" + product);
-        return "Success";
+        return product;
     }
 
     @RequestMapping(value = "/someService/{id}", method = RequestMethod.GET)
