@@ -1,9 +1,9 @@
 package kcm.test.search.service.solr.model;
 
 import kcm.test.search.service.core.model.Product;
-import org.springframework.data.solr.core.mapping.SolrDocument;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.solr.core.mapping.Indexed;
+import org.springframework.data.solr.core.mapping.SolrDocument;
 
 @SolrDocument(collection = "Product")
 public class SolrProduct implements Product {
@@ -14,8 +14,6 @@ public class SolrProduct implements Product {
 
     @Indexed(name = "name", type = "string")
     private String name;
-
-    //private List<String> categories;
 
     public String getId() {
         return id;
@@ -32,14 +30,6 @@ public class SolrProduct implements Product {
     public void setName(String name) {
         this.name = name;
     }
-
-    /*public List<String> getCategories() {
-        return categories;
-    }
-
-    public void setCategories(List<String> categories) {
-        this.categories = categories;
-    }*/
 
     @Override
     public String toString() {

@@ -35,17 +35,17 @@ public class SpringBootApp {
 
 
         Product test1 = productSearchService.getTest("1234");
-        System.out.println("test1" + test1);
+        System.out.println("test1 " + test1);
         Product test2 = productSearchService.getTest("1234");
-        System.out.println("test2" + test2);
+        System.out.println("test2 " + test2);
         SomeService someService = ctx.getBean(SomeService.class);
-        System.out.println("test3" + someService.getTest("hello"));
-        System.out.println("test4" + someService.getTest("hello"));
+        System.out.println("test3 " + someService.getTest("hello"));
+        System.out.println("test4 " + someService.getTest("hello"));
         CacheInvalidationService cacheInvalidationService = ctx.getBean(CacheInvalidationService.class);
 
         cacheInvalidationService.invalidateCacheByCacheName("some-cache");
-        System.out.println("test5" + someService.getTest("hello"));
-        System.out.println("test6" + someService.getTest("hello"));
+        System.out.println("test5 " + someService.getTest("hello"));
+        System.out.println("test6 " + someService.getTest("hello"));
 
     }
 }

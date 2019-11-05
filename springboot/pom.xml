@@ -11,18 +11,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>springboot</artifactId>
-   <!-- <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                &lt;!&ndash;<version>2.1.8.RELEASE</version>&ndash;&gt;
-                <version>2.1.2.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>-->
 
     <dependencies>
         <dependency>
@@ -43,6 +31,10 @@
             <groupId>kcm.test.cache.invalidator</groupId>
             <artifactId>cache-invalidator</artifactId>
             <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
         <!-- hot swapping, disable cache for template, enable live reload -->
         <dependency>

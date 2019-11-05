@@ -1,4 +1,4 @@
-package test.boot.conf;
+package test.boot.config.cache;
 
 public class CacheSpec {
 

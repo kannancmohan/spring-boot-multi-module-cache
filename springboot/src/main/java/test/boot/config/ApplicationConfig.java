@@ -1,4 +1,4 @@
-package test.boot;
+package test.boot.config;
 
 import org.springframework.context.annotation.Configuration;
 
